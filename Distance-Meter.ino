@@ -1,4 +1,3 @@
-//Youtube|Tech at Home
 #include <LiquidCrystal_I2C.h>
 
 int trig=7;
