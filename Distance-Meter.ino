@@ -52,28 +52,28 @@ void loop()
 
  Serial.println(distanceInCm);
  delay(100);
-   // Trigger the ultrasonic sensor
-  // digitalWrite(TRIGGER_PIN, LOW);
-  // delayMicroseconds(2);
-  // digitalWrite(TRIGGER_PIN, HIGH);
-  // delayMicroseconds(10);
-  // digitalWrite(TRIGGER_PIN, LOW);
+  // Trigger the ultrasonic sensor
+  digitalWrite(TRIGGER_PIN, LOW);
+  delayMicroseconds(2);
+  digitalWrite(TRIGGER_PIN, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIGGER_PIN, LOW);
 
   // Measure the duration of the pulse
-  // long duration = pulseIn(ECHO_PIN, HIGH);
+  long duration = pulseIn(ECHO_PIN, HIGH);
 
   // Calculate the distance in centimeters
-  // int distance = duration * 0.034 / 2;
+  int distance = duration * 0.034 / 2;
 
-    // Update the LCD with the distance
-  // lcd.setCursor(0, 1);
-  // lcd.print("   ");
-  // lcd.setCursor(0, 1);
-  // lcd.print(distance);
-  // lcd.print(" cm");
-    // Print the distance to the Serial Monitor
-  // Serial.print("Distance: ");
-  // Seri/al.print(distance);
-  // Serial.println(" cm");
+  // Update the LCD with the distance
+  lcd.setCursor(0, 1);
+  lcd.print("   ");
+  lcd.setCursor(0, 1);
+  lcd.print(distance);
+  lcd.print(" cm");
+  // Print the distance to the Serial Monitor
+  Serial.print("Distance: ");
+  Seri/al.print(distance);
+  Serial.println(" cm");
  
 }
